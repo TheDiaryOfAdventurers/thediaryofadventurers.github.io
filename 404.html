@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // 将路径信息保存在 sessionStorage 中，避免无限重定向循环
+        sessionStorage.redirect = location.pathname + location.search;
+
+        // 重定向到主页 index.html
+        // index.html 中的路由脚本会读取 sessionStorage.redirect 并进行正确的跳转
+        location.href = '/';
+    </script>
+</head>
+<body>
+</body>
+</html>
